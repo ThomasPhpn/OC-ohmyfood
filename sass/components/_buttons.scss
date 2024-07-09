@@ -1,0 +1,13 @@
+.explore_cta{
+    @include main-button;
+}
+.fonctionnement_button{
+    @include flex-center_row;
+    @include font-roboto-medium-16;
+    @include box-shadow;
+    background-color: $color-light-gray;
+    gap: 5px;
+    border: none;
+    padding: 15px;
+    border-radius: 20px;
+}
