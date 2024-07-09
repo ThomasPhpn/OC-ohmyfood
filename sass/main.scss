@@ -15,19 +15,65 @@
 @import "components/buttons";
 @import "components/cards";
 
-main{
-    background-color: $color-light-gray;
+main {
+  background-color: $color-light-gray;
 }
-.explore{
-    padding: 30px 40px;
-    gap: 20px;
-    text-align: center;
-    @include flex-center_column;
+.explore {
+  padding: 30px 40px;
+  gap: 20px;
+  text-align: center;
+  @include flex-center_column;
 }
-.fonctionnement{
+.fonctionnement {
+  padding: 50px 17.5px;
+  background-color: white;
+  gap: 20px;
+  @include flex-stretch_column;
+  &_step {
+    @include flex-center_row;
+  }
+}
+.step_number {
+  background-color: $color-dark-violet;
+  color: white;
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  margin-right: -10px;
+  z-index: 2;
+  @include flex-center_column;
+}
+.fa-solid {
+  color: $color-grey-icon;
+  height: 20px;
+}
+
+.restaurants {
+  padding: 50px 17.5px;
+  gap: 20px;
+  @include flex-start_column;
+}
+.restaurants_cards {
+  @include flex-center_column;
+  align-items: stretch;
+  gap: 18px;
+  width: 100%;
+}
+.restaurants_card {
+  background-color: white;
+  border-radius: 15px;
+  img {
+    height: 174px;
     width: 100%;
-    padding: 50px 20px;
-    background-color: white;
-    gap: 20px;
+    object-fit: cover;
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+  }
+}
+.card--content {
+  padding: 15px;
+  .card_txt {
     @include flex-start_column;
+    gap: 8px;
+  }
 }

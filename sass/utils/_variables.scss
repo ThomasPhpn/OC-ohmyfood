@@ -1,4 +1,10 @@
-$color-dark-gray: #EAEAEA;
+$color-dark-gray: #eaeaea;
 $color-middle-gray: #353535;
-$color-light-gray: #F6F6F6;
-$color-main-button: linear-gradient(315deg, #9356DC 0%, #FF79DA 100%);
+$color-grey-icon: #7e7e7e;
+$color-light-gray: #f6f6f6;
+$color-dark-violet: #9356dc;
+$color-main-button: linear-gradient(
+  359deg,
+  $color-dark-violet 0%,
+  #ff79da 100%
+);

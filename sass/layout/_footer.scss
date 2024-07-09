@@ -1,0 +1,15 @@
+.footer {
+  color: white;
+  padding: 25px 22px;
+  background-color: #353535;
+  gap: 16px;
+  @include flex-start_column;
+  img {
+    width: 100px;
+    filter: invert(1) brightness(2);
+  }
+  ul {
+    @include flex-start_column;
+    gap: 7px;
+  }
+}

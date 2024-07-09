@@ -16,13 +16,22 @@
   justify-content: center;
   align-items: flex-start;
 }
-@mixin box-shadow {
-  box-shadow: 
-  0 1px 3px rgba(0, 0, 0, 0.352),
-  0 2px 3px rgba(0, 0, 0, 0.221), 
-  0 4px 3px rgba(0, 0, 0, 0.023)
+@mixin flex-start_row {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: baseline;
 }
-@mixin main-button{
+@mixin flex-stretch_column {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: stretch;
+}
+@mixin box-shadow {
+  box-shadow: -1px 6px 6px 0px rgb(0 0 0 / 25%);
+}
+@mixin main-button {
   border: none;
   padding: 18px 18px;
   color: white;
