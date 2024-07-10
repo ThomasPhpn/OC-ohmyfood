@@ -130,11 +130,6 @@ table {
   border-spacing: 0;
 }
 
-* {
-  box-sizing: border-box;
-  font-family: "Roboto", sans-serif;
-}
-
 .explore_titre {
   font-weight: 700;
   font-size: 24px;
@@ -162,11 +157,44 @@ table {
   font-size: 17px;
 }
 
+.pastille_txt {
+  font-weight: 500;
+  font-size: 14px;
+  color: #008766;
+}
+
+.menu_titre {
+  font-weight: 500;
+  font-size: 28px;
+  font-family: "Shrikhand", sans-serif;
+}
+
+.menu_section-title {
+  font-weight: 300;
+  font-size: 16px;
+}
+
+.menu_item-name {
+  font-weight: 500;
+  font-size: 18px;
+}
+
+.menu_item-description {
+  font-weight: 300;
+  font-size: 15px;
+}
+
+.menu_item-price {
+  font-weight: 700;
+  font-size: 15px;
+}
+
 .header {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  position: relative;
 }
 .header_logo {
   width: 100%;
@@ -180,6 +208,7 @@ table {
 }
 .header_logo img {
   width: 197px;
+  padding: 0px 17.5px;
 }
 
 .header_location {
@@ -198,6 +227,14 @@ table {
   box-shadow: -1px 6px 6px 0px rgba(0, 0, 0, 0.25);
 }
 
+.header i {
+  position: absolute;
+  top: 21px;
+  left: 23px;
+  font-size: 17px;
+  color: #353535;
+}
+
 .footer {
   color: white;
   padding: 25px 22px;
@@ -205,7 +242,7 @@ table {
   gap: 16px;
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: flex-start;
   align-items: flex-start;
 }
 .footer img {
@@ -215,9 +252,20 @@ table {
 .footer ul {
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: flex-start;
   align-items: flex-start;
   gap: 7px;
+}
+
+.footer li {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: baseline;
+  gap: 10px;
+}
+.footer li i {
+  color: white;
 }
 
 .explore_cta {
@@ -235,7 +283,7 @@ table {
   display: flex;
   flex-direction: row;
   justify-content: flex-start;
-  align-items: baseline;
+  align-items: center;
   font-weight: 500;
   font-size: 16px;
   box-shadow: -1px 6px 6px 0px rgba(0, 0, 0, 0.25);
@@ -247,12 +295,17 @@ table {
   border-radius: 20px;
 }
 
+* {
+  box-sizing: border-box;
+  font-family: "Roboto", sans-serif;
+}
+
 main {
   background-color: #f6f6f6;
 }
 
 .explore {
-  padding: 30px 40px;
+  padding: 30px 35px;
   gap: 20px;
   text-align: center;
   display: flex;
@@ -301,7 +354,7 @@ main {
   gap: 20px;
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: flex-start;
   align-items: flex-start;
 }
 
@@ -309,7 +362,6 @@ main {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  align-items: center;
   align-items: stretch;
   gap: 18px;
   width: 100%;
@@ -318,6 +370,7 @@ main {
 .restaurants_card {
   background-color: white;
   border-radius: 15px;
+  position: relative;
 }
 .restaurants_card img {
   height: 174px;
@@ -330,11 +383,108 @@ main {
 
 .card--content {
   padding: 15px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
 }
 .card--content .card_txt {
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: flex-start;
   align-items: flex-start;
   gap: 8px;
+}
+
+.restaurants_pastille {
+  display: inline-block;
+  background-color: #99e2d0;
+  border-radius: 2px;
+  position: absolute;
+  top: 12.5px;
+  right: 12.5px;
+}
+
+.pastille_txt {
+  padding: 7px 15px;
+}
+
+.card--content > i {
+  font-size: 20px;
+}
+
+/*PAGES*/
+.masthead {
+  position: relative;
+  z-index: 1;
+}
+.masthead img {
+  height: 275px;
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.menu_container {
+  background-color: #f6f6f6;
+  position: relative;
+  margin-top: -30px;
+  border-top-left-radius: 30px;
+  border-top-right-radius: 30px;
+  z-index: 2;
+}
+
+.menu_head {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: flex-start;
+  gap: 30px;
+  padding: 40px 15px 30px 15px;
+}
+
+.menu_container i {
+  font-size: 21px;
+}
+
+.menu_section {
+  padding: 13px 13px 20px 13px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: stretch;
+  gap: 12px;
+}
+
+.menu_section-title {
+  position: relative;
+}
+
+.menu_section-title::after {
+  content: "";
+  position: absolute;
+  bottom: -9px;
+  left: 0;
+  width: 40px;
+  height: 3px;
+  background-color: #99e2d0; /* Changez la couleur pour correspondre au vert que vous souhaitez */
+}
+
+.menu_item {
+  background-color: white;
+  padding: 10px;
+  border-radius: 15px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: flex-end;
+  margin-top: 12px;
+}
+
+.menu_item-text {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  gap: 5px;
 }/*# sourceMappingURL=main.css.map */

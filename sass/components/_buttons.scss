@@ -1,8 +1,9 @@
 .explore_cta {
   @include main-button;
 }
+
 .fonctionnement_button {
-  @include flex-start_row;
+  @include flex(row, flex-start, center); // Spécifiez tous les trois arguments
   @include font-roboto-medium-16;
   @include box-shadow;
   width: 100%;

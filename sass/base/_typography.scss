@@ -1,46 +1,40 @@
-$font-weight-bold: 700;
-$font-weight-medium: 500;
-$font-weight-light: 300;
-$font-size-15: 15px;
-$font-size-16: 16px;
-$font-size-17: 17px;
-$font-size-18: 18px;
-$font-size-24: 24px;
-
-@mixin font-roboto-medium-16 {
-  font-weight: $font-weight-medium;
-  font-size: $font-size-16;
-}
-@mixin font-roboto-light-18 {
-  font-weight: $font-weight-light;
-  font-size: $font-size-18;
-}
-@mixin font-roboto-bold-24 {
-  font-weight: $font-weight-bold;
-  font-size: $font-size-24;
-}
-@mixin font-roboto-bold-18 {
-  font-weight: $font-weight-bold;
-  font-size: $font-size-18;
-}
-@mixin font-roboto-light-17 {
-  font-weight: $font-weight-light;
-  font-size: $font-size-17;
-}
 .explore_titre {
   @include font-roboto-bold-24;
 }
+
 .explore_text {
   @include font-roboto-light-18;
   color: $color-middle-gray;
 }
+
 .fonctionnement_title,
 .restaurants_titre {
   @include font-roboto-bold-24;
 }
+
 .card_title {
   @include font-roboto-bold-18;
 }
+
 .card_subtitle {
-  @include font-roboto-light-17();
+  @include font-roboto-light-17;
+}
+.pastille_txt {
+  @include font-roboto-medium-14;
+  color: $color-dark-green;
+}
+.menu_titre {
+  @include font-shrikhand-medium-28;
+}
+.menu_section-title {
+  @include font-roboto-light-16;
+}
+.menu_item-name {
+  @include font-roboto-medium-18;
+}
+.menu_item-description {
+  @include font-roboto-light-15;
+}
+.menu_item-price {
+  @include font-roboto-bold-15;
 }

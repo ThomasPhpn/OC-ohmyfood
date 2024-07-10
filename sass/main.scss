@@ -13,26 +13,34 @@
 
 // components
 @import "components/buttons";
-@import "components/cards";
+
+* {
+  box-sizing: border-box;
+  font-family: "Roboto", sans-serif;
+}
 
 main {
   background-color: $color-light-gray;
 }
+
 .explore {
-  padding: 30px 40px;
+  padding: 30px 35px;
   gap: 20px;
   text-align: center;
-  @include flex-center_column;
+  @include flex(column, center, center);
 }
+
 .fonctionnement {
   padding: 50px 17.5px;
   background-color: white;
   gap: 20px;
-  @include flex-stretch_column;
+  @include flex(column, center, stretch);
+
   &_step {
-    @include flex-center_row;
+    @include flex(row, center, center);
   }
 }
+
 .step_number {
   background-color: $color-dark-violet;
   color: white;
@@ -41,8 +49,9 @@ main {
   border-radius: 50%;
   margin-right: -10px;
   z-index: 2;
-  @include flex-center_column;
+  @include flex(column, center, center);
 }
+
 .fa-solid {
   color: $color-grey-icon;
   height: 20px;
@@ -51,17 +60,20 @@ main {
 .restaurants {
   padding: 50px 17.5px;
   gap: 20px;
-  @include flex-start_column;
+  @include flex(column, flex-start, flex-start);
 }
+
 .restaurants_cards {
-  @include flex-center_column;
-  align-items: stretch;
+  @include flex(column, center, stretch);
   gap: 18px;
   width: 100%;
 }
+
 .restaurants_card {
   background-color: white;
   border-radius: 15px;
+  position: relative;
+
   img {
     height: 174px;
     width: 100%;
@@ -70,10 +82,82 @@ main {
     border-top-right-radius: 15px;
   }
 }
+
 .card--content {
   padding: 15px;
+  @include flex(row, space-between, center);
   .card_txt {
-    @include flex-start_column;
+    @include flex(column, flex-start, flex-start);
     gap: 8px;
   }
+}
+
+.restaurants_pastille {
+  display: inline-block;
+  background-color: $color-light-green;
+  border-radius: 2px;
+  position: absolute;
+  top: 12.5px;
+  right: 12.5px;
+}
+.pastille_txt {
+  padding: 7px 15px;
+}
+.card--content > i {
+  font-size: 20px;
+}
+
+/*PAGES*/
+.masthead {
+  position: relative;
+  z-index: 1;
+  img {
+    height: 275px;
+    width: 100%;
+    object-fit: cover;
+  }
+}
+.menu_container {
+  background-color: $color-light-gray;
+  position: relative;
+  margin-top: -30px;
+  border-top-left-radius: 30px;
+  border-top-right-radius: 30px;
+  z-index: 2;
+}
+.menu_head {
+  @include flex(row, flex-start, flex-start);
+  gap: 30px;
+  padding: 40px 15px 30px 15px;
+}
+.menu_container i {
+  font-size: 21px;
+}
+.menu_section {
+  padding: 13px 13px 20px 13px;
+  @include flex(column, flex-start, stretch);
+  gap: 12px;
+}
+.menu_section-title {
+  position: relative;
+}
+.menu_section-title::after {
+  content: "";
+  position: absolute;
+  bottom: -9px;
+  left: 0;
+  width: 40px;
+  height: 3px;
+  background-color: #99e2d0; /* Changez la couleur pour correspondre au vert que vous souhaitez */
+}
+.menu_item {
+  background-color: white;
+  padding: 10px;
+  border-radius: 15px;
+  @include flex(row, space-between, flex-end);
+  margin-top: 12px;
+}
+.menu_item-text {
+  @include flex(column, flex-start, flex-start);
+  gap: 5px;
 }

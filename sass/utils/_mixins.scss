@@ -1,36 +1,7 @@
-@mixin flex-center_row {
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
-}
-@mixin flex-center_column {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-}
-@mixin flex-start_column {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: flex-start;
-}
-@mixin flex-start_row {
-  display: flex;
-  flex-direction: row;
-  justify-content: flex-start;
-  align-items: baseline;
-}
-@mixin flex-stretch_column {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: stretch;
-}
 @mixin box-shadow {
   box-shadow: -1px 6px 6px 0px rgb(0 0 0 / 25%);
 }
+
 @mixin main-button {
   border: none;
   padding: 18px 18px;
@@ -39,4 +10,50 @@
   background: $color-main-button;
   @include font-roboto-medium-16;
   @include box-shadow;
+}
+
+@mixin font-style($weight, $size) {
+  font-weight: $weight;
+  font-size: $size;
+}
+
+@mixin font-roboto-medium-16 {
+  @include font-style($font-weight-medium, $font-size-16);
+}
+
+@mixin font-roboto-light-18 {
+  @include font-style($font-weight-light, $font-size-18);
+}
+
+@mixin font-roboto-bold-24 {
+  @include font-style($font-weight-bold, $font-size-24);
+}
+
+@mixin font-roboto-bold-18 {
+  @include font-style($font-weight-bold, $font-size-18);
+}
+
+@mixin font-roboto-light-17 {
+  @include font-style($font-weight-light, $font-size-17);
+}
+@mixin font-roboto-medium-14 {
+  @include font-style($font-weight-medium, $font-size-14);
+}
+
+@mixin font-roboto-light-16 {
+  @include font-style($font-weight-light, $font-size-16);
+}
+@mixin font-roboto-medium-18 {
+  @include font-style($font-weight-medium, $font-size-18);
+}
+
+@mixin font-roboto-light-15 {
+  @include font-style($font-weight-light, $font-size-15);
+}
+@mixin font-roboto-bold-15 {
+  @include font-style($font-weight-bold, $font-size-15);
+}
+@mixin font-shrikhand-medium-28 {
+  @include font-style($font-weight-medium, $font-size-28);
+  font-family: "Shrikhand", sans-serif;
 }

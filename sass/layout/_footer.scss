@@ -3,13 +3,22 @@
   padding: 25px 22px;
   background-color: #353535;
   gap: 16px;
-  @include flex-start_column;
+  @include flex(column, flex-start, flex-start);
+
   img {
     width: 100px;
     filter: invert(1) brightness(2);
   }
+
   ul {
-    @include flex-start_column;
+    @include flex(column, flex-start, flex-start);
     gap: 7px;
+  }
+}
+.footer li {
+  @include flex(row, center, baseline);
+  gap: 10px;
+  i {
+    color: white;
   }
 }
