@@ -11,6 +11,16 @@
   @include font-roboto-medium-16;
   @include box-shadow;
 }
+@mixin order-button {
+  width: 50%;
+  border: none;
+  padding: 18px 18px;
+  color: white;
+  border-radius: 25px;
+  background: $color-main-button;
+  @include font-roboto-medium-16;
+  @include box-shadow;
+}
 
 @mixin font-style($weight, $size) {
   font-weight: $weight;

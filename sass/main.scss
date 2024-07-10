@@ -138,6 +138,11 @@ main {
   @include flex(column, flex-start, stretch);
   gap: 12px;
 }
+.menu_section_button {
+  padding: 15px 13px 50px 13px;
+  @include flex(column, flex-start, center);
+  gap: 12px;
+}
 .menu_section-title {
   position: relative;
 }

@@ -279,6 +279,17 @@ table {
   box-shadow: -1px 6px 6px 0px rgba(0, 0, 0, 0.25);
 }
 
+.order_cta {
+  border: none;
+  padding: 18px 18px;
+  color: white;
+  border-radius: 25px;
+  background: linear-gradient(359deg, #9356dc 0%, #ff79da 100%);
+  font-weight: 500;
+  font-size: 16px;
+  box-shadow: -1px 6px 6px 0px rgba(0, 0, 0, 0.25);
+}
+
 .fonctionnement_button {
   display: flex;
   flex-direction: row;
@@ -293,6 +304,18 @@ table {
   border: none;
   padding: 20px 40px;
   border-radius: 20px;
+}
+
+.order_button {
+  width: 50%;
+  border: none;
+  padding: 18px 18px;
+  color: white;
+  border-radius: 25px;
+  background: linear-gradient(359deg, #9356dc 0%, #ff79da 100%);
+  font-weight: 500;
+  font-size: 16px;
+  box-shadow: -1px 6px 6px 0px rgba(0, 0, 0, 0.25);
 }
 
 * {
@@ -453,6 +476,15 @@ main {
   flex-direction: column;
   justify-content: flex-start;
   align-items: stretch;
+  gap: 12px;
+}
+
+.menu_section_button {
+  padding: 15px 13px 50px 13px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
   gap: 12px;
 }
 

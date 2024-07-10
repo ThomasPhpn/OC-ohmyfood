@@ -1,7 +1,9 @@
 .explore_cta {
   @include main-button;
 }
-
+.order_cta {
+  @include main-button;
+}
 .fonctionnement_button {
   @include flex(row, flex-start, center); // Spécifiez tous les trois arguments
   @include font-roboto-medium-16;
@@ -12,4 +14,7 @@
   border: none;
   padding: 20px 40px;
   border-radius: 20px;
+}
+.order_button{
+  @include order-button;
 }
