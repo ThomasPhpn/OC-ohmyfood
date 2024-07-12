@@ -8,7 +8,9 @@
     z-index: 2;
     @include flex(column, center, center);
     @include box-shadow;
-
+    @media (min-width: 768px) {
+        box-shadow: none;
+      }
     img {
       width: 197px;
       padding: 0px 17.5px;
@@ -26,6 +28,9 @@
   @include flex(row, center, center);
   @include font-roboto-medium-16;
   @include box-shadow;
+  @media (min-width: 768px) {
+    box-shadow: none;
+  }
 }
 
 .fa-arrow-left {

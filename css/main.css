@@ -133,6 +133,7 @@ table {
 .explore_titre {
   font-weight: 700;
   font-size: 24px;
+  width: 80%;
 }
 
 .explore_text {
@@ -206,6 +207,11 @@ table {
   align-items: center;
   box-shadow: -1px 6px 6px 0px rgba(0, 0, 0, 0.25);
 }
+@media (min-width: 768px) {
+  .header_logo {
+    box-shadow: none;
+  }
+}
 .header_logo img {
   width: 197px;
   padding: 0px 17.5px;
@@ -226,6 +232,11 @@ table {
   font-size: 16px;
   box-shadow: -1px 6px 6px 0px rgba(0, 0, 0, 0.25);
 }
+@media (min-width: 768px) {
+  .header_location {
+    box-shadow: none;
+  }
+}
 
 .fa-arrow-left {
   position: absolute;
@@ -245,6 +256,12 @@ table {
   justify-content: flex-start;
   align-items: flex-start;
 }
+@media (min-width: 768px) {
+  .footer {
+    flex-direction: row-reverse;
+    gap: 90px;
+  }
+}
 .footer img {
   width: 100px;
   filter: invert(1) brightness(2);
@@ -255,6 +272,12 @@ table {
   justify-content: flex-start;
   align-items: flex-start;
   gap: 7px;
+}
+@media (min-width: 768px) {
+  .footer ul {
+    flex-direction: row;
+    align-items: baseline;
+  }
 }
 
 .footer li {
@@ -268,6 +291,11 @@ table {
   color: white;
 }
 
+@media (min-width: 768px) {
+  .footer-partenaire {
+    margin-right: 40px;
+  }
+}
 .explore_cta {
   border: none;
   padding: 18px 18px;
@@ -338,6 +366,7 @@ main {
 }
 
 .fonctionnement {
+  width: 100%;
   padding: 50px 17.5px;
   background-color: white;
   gap: 20px;
@@ -346,11 +375,35 @@ main {
   justify-content: center;
   align-items: stretch;
 }
+@media (min-width: 768px) {
+  .fonctionnement {
+    padding: 50px 100px;
+  }
+}
 .fonctionnement_step {
   display: flex;
   flex-direction: row;
   justify-content: center;
   align-items: center;
+}
+@media (min-width: 768px) {
+  .fonctionnement_step {
+    flex: 1;
+  }
+}
+
+.fonctionnement_steps {
+  display: flex;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: stretch;
+  gap: 20px;
+}
+@media (min-width: 768px) {
+  .fonctionnement_steps {
+    flex-direction: row;
+  }
 }
 
 .step_number {
@@ -380,6 +433,11 @@ main {
   justify-content: flex-start;
   align-items: flex-start;
 }
+@media (min-width: 768px) {
+  .restaurants {
+    padding: 50px 100px;
+  }
+}
 
 .restaurants_cards {
   display: flex;
@@ -388,6 +446,15 @@ main {
   align-items: stretch;
   gap: 18px;
   width: 100%;
+}
+@media (min-width: 768px) {
+  .restaurants_cards {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    row-gap: 50px;
+    -moz-column-gap: 100px;
+         column-gap: 100px;
+  }
 }
 
 .restaurants_card {
@@ -437,6 +504,10 @@ main {
 }
 
 /*PAGES*/
+.menu {
+  background-color: white;
+}
+
 .masthead {
   position: relative;
   z-index: 1;
@@ -451,10 +522,16 @@ main {
 .menu_container {
   background-color: #f6f6f6;
   position: relative;
-  margin-top: -30px;
+  margin: -30px 0 0 0;
   border-top-left-radius: 30px;
   border-top-right-radius: 30px;
   z-index: 2;
+}
+@media (min-width: 768px) {
+  .menu_container {
+    padding: 0 100px 0 100px;
+    margin: -30px 100px 0px 100px;
+  }
 }
 
 .menu_head {
@@ -464,6 +541,11 @@ main {
   align-items: flex-start;
   gap: 30px;
   padding: 40px 15px 30px 15px;
+}
+@media (min-width: 768px) {
+  .menu_head {
+    justify-content: center;
+  }
 }
 
 .menu_container i {

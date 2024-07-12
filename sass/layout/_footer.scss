@@ -4,6 +4,10 @@
   background-color: #353535;
   gap: 16px;
   @include flex(column, flex-start, flex-start);
+  @media (min-width: 768px) {
+    flex-direction: row-reverse;
+    gap: 90px;
+  }
 
   img {
     width: 100px;
@@ -13,6 +17,10 @@
   ul {
     @include flex(column, flex-start, flex-start);
     gap: 7px;
+    @media (min-width: 768px) {
+      flex-direction: row;
+      align-items: baseline;
+    }
   }
 }
 .footer li {
@@ -21,4 +29,9 @@
   i {
     color: white;
   }
+}
+@media (min-width: 768px) {
+.footer-partenaire{
+  margin-right: 40px;
+}
 }
