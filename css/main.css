@@ -135,6 +135,16 @@ table {
   font-size: 24px;
   width: 80%;
 }
+@media (min-width: 768px) {
+  .explore_titre {
+    font-size: 30px;
+  }
+}
+@media (min-width: 1024px) {
+  .explore_titre {
+    font-size: 40px;
+  }
+}
 
 .explore_text {
   font-weight: 300;
@@ -166,7 +176,7 @@ table {
 
 .menu_titre {
   font-weight: 500;
-  font-size: 28px;
+  font-size: 40px;
   font-family: "Shrikhand", sans-serif;
 }
 
@@ -256,7 +266,7 @@ table {
   justify-content: flex-start;
   align-items: flex-start;
 }
-@media (min-width: 768px) {
+@media (min-width: 1024px) {
   .footer {
     flex-direction: row-reverse;
     gap: 90px;
@@ -266,6 +276,11 @@ table {
   width: 100px;
   filter: invert(1) brightness(2);
 }
+@media (min-width: 768px) {
+  .footer img {
+    margin-right: 20px;
+  }
+}
 .footer ul {
   display: flex;
   flex-direction: column;
@@ -273,10 +288,11 @@ table {
   align-items: flex-start;
   gap: 7px;
 }
-@media (min-width: 768px) {
+@media (min-width: 1024px) {
   .footer ul {
     flex-direction: row;
     align-items: baseline;
+    gap: 15px;
   }
 }
 
@@ -293,15 +309,16 @@ table {
 
 @media (min-width: 768px) {
   .footer-partenaire {
-    margin-right: 40px;
+    margin-right: 25px;
   }
 }
 .explore_cta {
   border: none;
   padding: 18px 18px;
+  margin: 15px 0px 15px 0px;
   color: white;
   border-radius: 25px;
-  background: linear-gradient(359deg, #9356dc 0%, #FF79DA 100%);
+  background: linear-gradient(359deg, #9356dc 0%, #ff79da 100%);
   font-weight: 500;
   font-size: 16px;
   box-shadow: -1px 6px 6px 0px rgba(0, 0, 0, 0.25);
@@ -310,9 +327,10 @@ table {
 .order_cta {
   border: none;
   padding: 18px 18px;
+  margin: 15px 0px 15px 0px;
   color: white;
   border-radius: 25px;
-  background: linear-gradient(359deg, #9356dc 0%, #FF79DA 100%);
+  background: linear-gradient(359deg, #9356dc 0%, #ff79da 100%);
   font-weight: 500;
   font-size: 16px;
   box-shadow: -1px 6px 6px 0px rgba(0, 0, 0, 0.25);
@@ -327,6 +345,7 @@ table {
   font-size: 16px;
   box-shadow: -1px 6px 6px 0px rgba(0, 0, 0, 0.25);
   width: 100%;
+  max-width: 400px;
   background-color: #f6f6f6;
   gap: 25px;
   border: none;
@@ -340,7 +359,7 @@ table {
   padding: 18px 18px;
   color: white;
   border-radius: 25px;
-  background: linear-gradient(359deg, #9356dc 0%, #FF79DA 100%);
+  background: linear-gradient(359deg, #9356dc 0%, #ff79da 100%);
   font-weight: 500;
   font-size: 16px;
   box-shadow: -1px 6px 6px 0px rgba(0, 0, 0, 0.25);
@@ -367,9 +386,9 @@ main {
 
 .fonctionnement {
   width: 100%;
-  padding: 50px 17.5px;
+  padding: 50px 17.5px 70px 17.5px;
   background-color: white;
-  gap: 20px;
+  gap: 25px;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -377,32 +396,34 @@ main {
 }
 @media (min-width: 768px) {
   .fonctionnement {
+    align-items: center;
     padding: 50px 100px;
+  }
+}
+@media (min-width: 1024px) {
+  .fonctionnement {
+    align-items: stretch;
   }
 }
 .fonctionnement_step {
   display: flex;
   flex-direction: row;
-  justify-content: center;
+  justify-content: flex-start;
   align-items: center;
-}
-@media (min-width: 768px) {
-  .fonctionnement_step {
-    flex: 1;
-  }
+  width: 100%;
 }
 
 .fonctionnement_steps {
   display: flex;
-  display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: flex-start;
   align-items: stretch;
   gap: 20px;
 }
-@media (min-width: 768px) {
+@media (min-width: 1024px) {
   .fonctionnement_steps {
     flex-direction: row;
+    justify-content: space-between;
   }
 }
 
@@ -423,6 +444,10 @@ main {
 .fa-solid {
   color: #7e7e7e;
   height: 20px;
+}
+
+.fa-store {
+  color: #9356dc;
 }
 
 .restaurants {
@@ -501,6 +526,18 @@ main {
 
 .card--content > i {
   font-size: 20px;
+}
+
+.liked i.fa-regular.fa-heart {
+  display: none;
+}
+
+.liked i.fa-solid.fa-heart::before {
+  background: linear-gradient(201deg, #9356dc 0%, #ff79da 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  text-fill-color: transparent;
 }
 
 /*PAGES*/

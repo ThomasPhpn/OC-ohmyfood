@@ -5,6 +5,7 @@
 @mixin main-button {
   border: none;
   padding: 18px 18px;
+  margin: 15px 0px 15px 0px;
   color: white;
   border-radius: 25px;
   background: linear-gradient-deg(359deg);
@@ -63,13 +64,12 @@
 @mixin font-roboto-bold-15 {
   @include font-style($font-weight-bold, $font-size-15);
 }
+@mixin font-roboto-bold-40 {
+  @include font-style($font-weight-bold, $font-size-40);
+}
 @mixin font-shrikhand-medium-28 {
   @include font-style($font-weight-medium, $font-size-28);
   font-family: "Shrikhand", sans-serif;
-}
-@mixin font-style($weight, $size) {
-  font-weight: $weight;
-  font-size: $size;
 }
 @mixin flex($direction, $justify, $align) {
   display: flex;

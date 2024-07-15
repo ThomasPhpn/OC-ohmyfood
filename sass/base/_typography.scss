@@ -1,6 +1,12 @@
 .explore_titre {
   @include font-roboto-bold-24;
-  width: 80%
+  width: 80%;
+  @media (min-width: 768px) {
+    font-size: 30px;
+  }
+  @media (min-width: 1024px) {
+    font-size: 40px;
+  }
 }
 
 .explore_text {
