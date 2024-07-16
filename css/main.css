@@ -176,7 +176,7 @@ table {
 
 .menu_titre {
   font-weight: 500;
-  font-size: 40px;
+  font-size: 28px;
   font-family: "Shrikhand", sans-serif;
 }
 
@@ -370,6 +370,11 @@ table {
   font-family: "Roboto", sans-serif;
 }
 
+a,
+i {
+  cursor: pointer;
+}
+
 main {
   background-color: #f6f6f6;
 }
@@ -524,20 +529,32 @@ main {
   padding: 7px 15px;
 }
 
-.card--content > i {
+/*TOGGLE GRADIENT*/
+label {
   font-size: 20px;
 }
 
-.liked i.fa-regular.fa-heart {
-  display: none;
-}
-
-.liked i.fa-solid.fa-heart::before {
+i.fa-solid.fa-heart::before {
   background: linear-gradient(201deg, #9356dc 0%, #ff79da 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
-  text-fill-color: transparent;
+}
+
+.card--content .toggle-checkbox {
+  display: none;
+}
+.card--content .fa-regular .regular-icon {
+  display: inline;
+}
+.card--content .solid-icon {
+  display: none;
+}
+.card--content .toggle-checkbox:checked + .toggle-label .regular-icon {
+  display: none;
+}
+.card--content .toggle-checkbox:checked + .toggle-label .solid-icon {
+  display: inline;
 }
 
 /*PAGES*/
@@ -570,10 +587,10 @@ main {
     margin: -30px 100px 0px 100px;
   }
 }
-@media (min-width: 768px) {
+@media (min-width: 1024px) {
   .menu_container {
-    padding: 0 100px 0 100px;
-    margin: -30px 100px 0px 100px;
+    padding: 0 200px 0 200px;
+    margin: -30px 150px 0px 150px;
   }
 }
 
@@ -581,7 +598,7 @@ main {
   display: flex;
   flex-direction: row;
   justify-content: flex-start;
-  align-items: flex-start;
+  align-items: center;
   gap: 30px;
   padding: 40px 15px 30px 15px;
 }
@@ -592,7 +609,24 @@ main {
 }
 
 .menu_container i {
-  font-size: 21px;
+  font-size: 25px;
+}
+
+/* TOGGLE*/
+.menu_container .toggle-checkbox {
+  display: none;
+}
+.menu_container .regular-icon {
+  display: inline;
+}
+.menu_container .solid-icon {
+  display: none;
+}
+.menu_container .toggle-checkbox:checked + .toggle-label .regular-icon {
+  display: none;
+}
+.menu_container .toggle-checkbox:checked + .toggle-label .solid-icon {
+  display: inline;
 }
 
 .menu_section {

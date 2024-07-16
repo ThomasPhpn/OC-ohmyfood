@@ -18,6 +18,10 @@
   box-sizing: border-box;
   font-family: "Roboto", sans-serif;
 }
+a,
+i {
+  cursor: pointer;
+}
 
 main {
   background-color: $color-light-gray;
@@ -131,18 +135,34 @@ main {
 .pastille_txt {
   padding: 7px 15px;
 }
-.card--content > i {
+
+/*TOGGLE GRADIENT*/
+label {
   font-size: 20px;
 }
-.liked i.fa-regular.fa-heart {
-  display: none;
-}
-.liked i.fa-solid.fa-heart::before {
+i.fa-solid.fa-heart::before {
   background: linear-gradient-deg(201deg);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
-  text-fill-color: transparent;
+}
+.card--content {
+  .toggle-checkbox {
+    display: none;
+  }
+  .fa-regular .regular-icon {
+    display: inline;
+  }
+  .solid-icon {
+    display: none;
+  }
+  .toggle-checkbox:checked + .toggle-label .regular-icon {
+    display: none;
+  }
+
+  .toggle-checkbox:checked + .toggle-label .solid-icon {
+    display: inline;
+  }
 }
 
 /*PAGES*/
@@ -169,13 +189,13 @@ main {
     padding: 0 100px 0 100px;
     margin: -30px 100px 0px 100px;
   }
-  @media (min-width: 768px) {
-    padding: 0 100px 0 100px;
-    margin: -30px 100px 0px 100px;
+  @media (min-width: 1024px) {
+    padding: 0 200px 0 200px;
+    margin: -30px 150px 0px 150px;
   }
 }
 .menu_head {
-  @include flex(row, flex-start, flex-start);
+  @include flex(row, flex-start, center);
   gap: 30px;
   padding: 40px 15px 30px 15px;
   @media (min-width: 768px) {
@@ -183,7 +203,26 @@ main {
   }
 }
 .menu_container i {
-  font-size: 21px;
+  font-size: 25px;
+}
+/* TOGGLE*/
+.menu_container {
+  .toggle-checkbox {
+    display: none;
+  }
+  .regular-icon {
+    display: inline;
+  }
+
+  .solid-icon {
+    display: none;
+  }
+  .toggle-checkbox:checked + .toggle-label .regular-icon {
+    display: none;
+  }
+  .toggle-checkbox:checked + .toggle-label .solid-icon {
+    display: inline;
+  }
 }
 .menu_section {
   padding: 13px 13px 20px 13px;
