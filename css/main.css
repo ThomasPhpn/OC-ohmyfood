@@ -662,6 +662,7 @@ i.fa-solid.fa-heart::before {
 }
 
 .menu_item {
+  position: relative;
   background-color: white;
   padding: 10px;
   border-radius: 15px;
@@ -670,12 +671,39 @@ i.fa-solid.fa-heart::before {
   justify-content: space-between;
   align-items: flex-end;
   margin-top: 12px;
+  position: relative;
 }
-
 .menu_item-text {
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
   align-items: flex-start;
   gap: 5px;
+}
+.menu_item-price {
+  position: relative;
+}
+.menu_item .highlight {
+  position: absolute;
+  width: 0px;
+  top: 0px;
+  right: 0px;
+  height: 58px;
+  background-color: #99e2d0;
+  border-top-right-radius: 15px;
+  border-bottom-right-radius: 15px;
+  visibility: hidden;
+  transition: opacity 250ms ease, visibility 250ms ease, right 250ms ease, width 250ms ease;
+}
+.menu_item:hover .highlight {
+  width: 50px;
+  visibility: visible;
+}
+.menu_item:hover .menu_item-price {
+  transform: translateX(-50px); /* Move .menu_item-price 50px to the left */
+  transition: transform 250ms ease; /* Smooth transition for the movement */
+}
+.menu_item-price {
+  position: relative; /* Ensure the .menu_item-price is positioned relative for movement */
+  transition: transform 250ms ease; /* Smooth transition for the movement */
 }/*# sourceMappingURL=main.css.map */

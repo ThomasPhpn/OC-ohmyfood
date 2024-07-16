@@ -247,13 +247,43 @@ i.fa-solid.fa-heart::before {
   background-color: #99e2d0; /* Changez la couleur pour correspondre au vert que vous souhaitez */
 }
 .menu_item {
+  position: relative;
   background-color: white;
   padding: 10px;
   border-radius: 15px;
   @include flex(row, space-between, flex-end);
   margin-top: 12px;
-}
-.menu_item-text {
-  @include flex(column, flex-start, flex-start);
-  gap: 5px;
+  position: relative;
+  &-text {
+    @include flex(column, flex-start, flex-start);
+    gap: 5px;
+  }
+  &-price {
+    position: relative;
+  }
+  .highlight {
+    position: absolute;
+    width: 0px;
+    top: 0px;
+    right: 0px;
+    height: 58px;
+    background-color: $color-light-green;
+    border-top-right-radius: 15px;
+    border-bottom-right-radius: 15px;
+    visibility: hidden;
+    transition: opacity 250ms ease, visibility 250ms ease, right 250ms ease,
+      width 250ms ease;
+  }
+  &:hover .highlight {
+    width: 50px;
+    visibility: visible;
+  }
+  &:hover .menu_item-price {
+    transform: translateX(-50px); /* Move .menu_item-price 50px to the left */
+    transition: transform 250ms ease; /* Smooth transition for the movement */
+  }
+  &-price {
+    position: relative; /* Ensure the .menu_item-price is positioned relative for movement */
+    transition: transform 250ms ease; /* Smooth transition for the movement */
+  }
 }
