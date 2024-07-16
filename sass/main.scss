@@ -271,8 +271,7 @@ i.fa-solid.fa-heart::before {
     border-top-right-radius: 15px;
     border-bottom-right-radius: 15px;
     visibility: hidden;
-    transition: opacity 250ms ease, visibility 250ms ease, right 250ms ease,
-      width 250ms ease;
+    transition: visibility 250ms ease-in-out, width 250ms ease-in-out;
   }
   &:hover .highlight {
     width: 50px;
