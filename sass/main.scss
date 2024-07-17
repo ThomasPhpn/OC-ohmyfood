@@ -149,6 +149,40 @@ main {
   padding: 7px 15px;
 }
 
+// ANIMATION COEUR ACCUEIL
+
+label {
+  font-size: 20px;
+}
+
+i.fa-solid.fa-heart::before {
+  background: linear-gradient-deg(201deg);
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.card--content {
+  .toggle-checkbox {
+    display: none;
+  }
+
+  .fa-regular .regular-icon {
+    display: inline;
+  }
+
+  .solid-icon {
+    display: none;
+  }
+
+  .toggle-checkbox:checked + .toggle-label .regular-icon {
+    display: none;
+  }
+
+  .toggle-checkbox:checked + .toggle-label .solid-icon {
+    display: inline;
+  }
+}
+
 // PAGES RESTAURANTS
 
 .menu {
@@ -237,41 +271,6 @@ main {
   &-text {
     @include flex(column, flex-start, flex-start);
     gap: 5px;
-  }
-}
-
-// ANIMATION COEUR HOMEPAGE
-
-label {
-  font-size: 20px;
-}
-
-i.fa-solid.fa-heart::before {
-  background: linear-gradient-deg(201deg);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
-}
-
-.card--content {
-  .toggle-checkbox {
-    display: none;
-  }
-
-  .fa-regular .regular-icon {
-    display: inline;
-  }
-
-  .solid-icon {
-    display: none;
-  }
-
-  .toggle-checkbox:checked + .toggle-label .regular-icon {
-    display: none;
-  }
-
-  .toggle-checkbox:checked + .toggle-label .solid-icon {
-    display: inline;
   }
 }
 

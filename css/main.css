@@ -518,6 +518,33 @@ main {
   padding: 7px 15px;
 }
 
+label {
+  font-size: 20px;
+}
+
+i.fa-solid.fa-heart::before {
+  background: linear-gradient(201deg, #9356dc 0%, #ff79da 100%);
+  -webkit-text-fill-color: transparent;
+  -webkit-background-clip: text;
+          background-clip: text;
+}
+
+.card--content .toggle-checkbox {
+  display: none;
+}
+.card--content .fa-regular .regular-icon {
+  display: inline;
+}
+.card--content .solid-icon {
+  display: none;
+}
+.card--content .toggle-checkbox:checked + .toggle-label .regular-icon {
+  display: none;
+}
+.card--content .toggle-checkbox:checked + .toggle-label .solid-icon {
+  display: inline;
+}
+
 .menu {
   background-color: white;
 }
@@ -622,33 +649,6 @@ main {
   justify-content: flex-start;
   align-items: flex-start;
   gap: 5px;
-}
-
-label {
-  font-size: 20px;
-}
-
-i.fa-solid.fa-heart::before {
-  background: linear-gradient(201deg, #9356dc 0%, #ff79da 100%);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
-}
-
-.card--content .toggle-checkbox {
-  display: none;
-}
-.card--content .fa-regular .regular-icon {
-  display: inline;
-}
-.card--content .solid-icon {
-  display: none;
-}
-.card--content .toggle-checkbox:checked + .toggle-label .regular-icon {
-  display: none;
-}
-.card--content .toggle-checkbox:checked + .toggle-label .solid-icon {
-  display: inline;
 }
 
 .menu_container .toggle-checkbox {
