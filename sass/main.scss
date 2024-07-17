@@ -18,6 +18,7 @@
   box-sizing: border-box;
   font-family: "Roboto", sans-serif;
 }
+
 a,
 i {
   cursor: pointer;
@@ -27,22 +28,27 @@ main {
   background-color: $color-light-gray;
 }
 
+// ACCUEIL
+
 .explore {
   padding: 30px 35px;
   gap: 20px;
   text-align: center;
   @include flex(column, center, center);
 }
+
 .fonctionnement {
   width: 100%;
   padding: 50px 17.5px 70px 17.5px;
   background-color: white;
   gap: 25px;
   @include flex(column, center, stretch);
+
   @media (min-width: 768px) {
     align-items: center;
     padding: 50px 100px;
   }
+
   @media (min-width: 1024px) {
     align-items: stretch;
   }
@@ -52,9 +58,11 @@ main {
     width: 100%;
   }
 }
+
 .fonctionnement_steps {
   @include flex(column, flex-start, stretch);
   gap: 20px;
+
   @media (min-width: 1024px) {
     flex-direction: row;
     justify-content: space-between;
@@ -76,6 +84,7 @@ main {
   color: $color-grey-icon;
   height: 20px;
 }
+
 .fa-store {
   color: $color-dark-violet;
 }
@@ -84,6 +93,7 @@ main {
   padding: 50px 17.5px;
   gap: 20px;
   @include flex(column, flex-start, flex-start);
+
   @media (min-width: 768px) {
     padding: 50px 100px;
   }
@@ -93,6 +103,7 @@ main {
   @include flex(column, center, stretch);
   gap: 18px;
   width: 100%;
+
   @media (min-width: 768px) {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
@@ -118,6 +129,7 @@ main {
 .card--content {
   padding: 15px;
   @include flex(row, space-between, center);
+
   .card_txt {
     @include flex(column, flex-start, flex-start);
     gap: 8px;
@@ -132,52 +144,28 @@ main {
   top: 12.5px;
   right: 12.5px;
 }
+
 .pastille_txt {
   padding: 7px 15px;
 }
 
-/*TOGGLE GRADIENT*/
-label {
-  font-size: 20px;
-}
-i.fa-solid.fa-heart::before {
-  background: linear-gradient-deg(201deg);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
-}
-.card--content {
-  .toggle-checkbox {
-    display: none;
-  }
-  .fa-regular .regular-icon {
-    display: inline;
-  }
-  .solid-icon {
-    display: none;
-  }
-  .toggle-checkbox:checked + .toggle-label .regular-icon {
-    display: none;
-  }
+// PAGES RESTAURANTS
 
-  .toggle-checkbox:checked + .toggle-label .solid-icon {
-    display: inline;
-  }
-}
-
-/*PAGES*/
 .menu {
   background-color: white;
 }
+
 .masthead {
   position: relative;
   z-index: 1;
+
   img {
     height: 275px;
     width: 100%;
     object-fit: cover;
   }
 }
+
 .menu_container {
   background-color: $color-light-gray;
   position: relative;
@@ -185,58 +173,48 @@ i.fa-solid.fa-heart::before {
   border-top-left-radius: 30px;
   border-top-right-radius: 30px;
   z-index: 2;
+
   @media (min-width: 768px) {
     padding: 0 100px 0 100px;
     margin: -30px 100px 0px 100px;
   }
+
   @media (min-width: 1024px) {
     padding: 0 200px 0 200px;
     margin: -30px 150px 0px 150px;
   }
 }
+
 .menu_head {
   @include flex(row, flex-start, center);
   gap: 30px;
   padding: 40px 15px 30px 15px;
+
   @media (min-width: 768px) {
     justify-content: center;
   }
 }
+
 .menu_container i {
   font-size: 25px;
 }
-/* TOGGLE*/
-.menu_container {
-  .toggle-checkbox {
-    display: none;
-  }
-  .regular-icon {
-    display: inline;
-  }
 
-  .solid-icon {
-    display: none;
-  }
-  .toggle-checkbox:checked + .toggle-label .regular-icon {
-    display: none;
-  }
-  .toggle-checkbox:checked + .toggle-label .solid-icon {
-    display: inline;
-  }
-}
 .menu_section {
   padding: 13px 13px 20px 13px;
   @include flex(column, flex-start, stretch);
   gap: 12px;
 }
+
 .menu_section_button {
   padding: 15px 13px 50px 13px;
   @include flex(column, flex-start, center);
   gap: 12px;
 }
+
 .menu_section-title {
   position: relative;
 }
+
 .menu_section-title::after {
   content: "";
   position: absolute;
@@ -244,8 +222,9 @@ i.fa-solid.fa-heart::before {
   left: 0;
   width: 40px;
   height: 3px;
-  background-color: #99e2d0; /* Changez la couleur pour correspondre au vert que vous souhaitez */
+  background-color: $color-light-green;
 }
+
 .menu_item {
   position: relative;
   background-color: white;
@@ -254,35 +233,68 @@ i.fa-solid.fa-heart::before {
   @include flex(row, space-between, flex-end);
   margin-top: 12px;
   position: relative;
+
   &-text {
     @include flex(column, flex-start, flex-start);
     gap: 5px;
   }
-  &-price {
-    position: relative;
+}
+
+// ANIMATION COEUR HOMEPAGE
+
+label {
+  font-size: 20px;
+}
+
+i.fa-solid.fa-heart::before {
+  background: linear-gradient-deg(201deg);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.card--content {
+  .toggle-checkbox {
+    display: none;
   }
-  .highlight {
-    position: absolute;
-    width: 0px;
-    top: 0px;
-    right: 0px;
-    height: 58px;
-    background-color: $color-light-green;
-    border-top-right-radius: 15px;
-    border-bottom-right-radius: 15px;
-    visibility: hidden;
-    transition: visibility 250ms ease-in-out, width 250ms ease-in-out;
+
+  .fa-regular .regular-icon {
+    display: inline;
   }
-  &:hover .highlight {
-    width: 50px;
-    visibility: visible;
+
+  .solid-icon {
+    display: none;
   }
-  &:hover .menu_item-price {
-    transform: translateX(-50px); /* Move .menu_item-price 50px to the left */
-    transition: transform 250ms ease; /* Smooth transition for the movement */
+
+  .toggle-checkbox:checked + .toggle-label .regular-icon {
+    display: none;
   }
-  &-price {
-    position: relative; /* Ensure the .menu_item-price is positioned relative for movement */
-    transition: transform 250ms ease; /* Smooth transition for the movement */
+
+  .toggle-checkbox:checked + .toggle-label .solid-icon {
+    display: inline;
+  }
+}
+
+// ANIMATION COEUR PAGES RESTAURANTS
+
+.menu_container {
+  .toggle-checkbox {
+    display: none;
+  }
+
+  .regular-icon {
+    display: inline;
+  }
+
+  .solid-icon {
+    display: none;
+  }
+
+  .toggle-checkbox:checked + .toggle-label .regular-icon {
+    display: none;
+  }
+
+  .toggle-checkbox:checked + .toggle-label .solid-icon {
+    display: inline;
   }
 }

@@ -1,5 +1,5 @@
 .explore_titre {
-  @include font-roboto-bold-24;
+  @include font-style(700, 24px);
   width: 80%;
   @media (min-width: 768px) {
     font-size: 30px;
@@ -10,38 +10,39 @@
 }
 
 .explore_text {
-  @include font-roboto-light-18;
+  @include font-style(300, 18px);
   color: $color-middle-gray;
 }
 
 .fonctionnement_title,
 .restaurants_titre {
-  @include font-roboto-bold-24;
+  @include font-style(700, 24px);
 }
 
 .card_title {
-  @include font-roboto-bold-18;
+  @include font-style(700, 18px);
 }
 
 .card_subtitle {
-  @include font-roboto-light-17;
+  @include font-style(300, 17px);
 }
 .pastille_txt {
-  @include font-roboto-medium-14;
+  @include font-style(500, 14px);
   color: $color-dark-green;
 }
 .menu_titre {
-  @include font-shrikhand-medium-28;
+  @include font-style(500, 28px);
+  font-family: "Shrikhand", sans-serif;
 }
 .menu_section-title {
-  @include font-roboto-light-16;
+  @include font-style(300, 16px);
 }
 .menu_item-name {
-  @include font-roboto-medium-18;
+  @include font-style(500, 18px);
 }
 .menu_item-description {
-  @include font-roboto-light-15;
+  @include font-style(300, 15px);
 }
 .menu_item-price {
-  @include font-roboto-bold-15;
+  @include font-style(700, 15px);
 }

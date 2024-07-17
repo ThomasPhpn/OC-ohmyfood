@@ -9,8 +9,8 @@
     @include flex(column, center, center);
     @include box-shadow;
     @media (min-width: 768px) {
-        box-shadow: none;
-      }
+      box-shadow: none;
+    }
     img {
       width: 197px;
       padding: 0px 17.5px;
@@ -26,7 +26,7 @@
   gap: 17px;
   z-index: 1;
   @include flex(row, center, center);
-  @include font-roboto-medium-16;
+  @include font-style(500, 16px);
   @include box-shadow;
   @media (min-width: 768px) {
     box-shadow: none;
