@@ -1,13 +1,18 @@
 .explore_cta,
-.order_cta {
+.order_button {
   border: none;
-  padding: 18px 18px;
   margin: 15px 0px 15px 0px;
   color: white;
   border-radius: 25px;
   background: linear-gradient-deg(359deg);
   @include font-style(500, 16px);
   @include box-shadow;
+}
+.explore_cta {
+  padding: 15.5px 20px;
+}
+.order_button {
+  padding: 15.5px 49px;
 }
 .fonctionnement_button {
   @include flex(row, flex-start, center); // Spécifiez tous les trois arguments
@@ -20,14 +25,4 @@
   border: none;
   padding: 20px 40px;
   border-radius: 20px;
-}
-.order_button {
-  width: 50%;
-  border: none;
-  padding: 18px 18px;
-  color: white;
-  border-radius: 25px;
-  background: linear-gradient-deg(359deg);
-  @include font-style(500, 16px);
-  @include box-shadow;
 }

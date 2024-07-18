@@ -17,7 +17,6 @@
     }
   }
 }
-
 .header_location {
   background-color: $color-dark-gray;
   color: $color-middle-gray;
@@ -30,6 +29,9 @@
   @include box-shadow;
   @media (min-width: 768px) {
     box-shadow: none;
+  }
+  .fa-location-dot {
+    color: $color-middle-gray;
   }
 }
 

@@ -39,7 +39,7 @@ main {
 
 .fonctionnement {
   width: 100%;
-  padding: 50px 17.5px 70px 17.5px;
+  padding: 50px 20px 70px 20px;
   background-color: white;
   gap: 25px;
   @include flex(column, center, stretch);
@@ -56,6 +56,7 @@ main {
   &_step {
     @include flex(row, flex-start, center);
     width: 100%;
+    padding: 6px 0px;
   }
 }
 
@@ -240,7 +241,7 @@ i.fa-solid.fa-heart::before {
 }
 
 .menu_section_button {
-  padding: 15px 13px 50px 13px;
+  padding: 15px 13px 30px 13px;
   @include flex(column, flex-start, center);
   gap: 12px;
 }
@@ -252,7 +253,7 @@ i.fa-solid.fa-heart::before {
 .menu_section-title::after {
   content: "";
   position: absolute;
-  bottom: -9px;
+  bottom: -5px;
   left: 0;
   width: 40px;
   height: 3px;
@@ -262,16 +263,9 @@ i.fa-solid.fa-heart::before {
 .menu_item {
   position: relative;
   background-color: white;
-  padding: 10px;
   border-radius: 15px;
   @include flex(row, space-between, flex-end);
-  margin-top: 12px;
   position: relative;
-
-  &-text {
-    @include flex(column, flex-start, flex-start);
-    gap: 5px;
-  }
 }
 
 // ANIMATION COEUR PAGES RESTAURANTS
@@ -296,4 +290,68 @@ i.fa-solid.fa-heart::before {
   .toggle-checkbox:checked + .toggle-label .solid-icon {
     display: inline;
   }
+}
+// ANIMATION AJOUT PANNIER
+
+.rectangle {
+  @include flex(row, space-between, flex-end);
+  width: 100%;
+  border-radius: 15px;
+  position: relative;
+  overflow: hidden;
+  border: none;
+  cursor: pointer;
+  padding: 15.5px 15px;
+}
+.menu_item-price {
+  padding-right: 10px;
+  display: flex;
+  align-items: center;
+  transition: transform 0.5s ease-in-out;
+}
+.menu_item .toggle-checkbox {
+  display: none;
+}
+.menu_item-text {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 5px;
+}
+.square_check {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 59px;
+  height: 100%;
+  background-color: $color-light-green;
+  border-top-right-radius: 15px;
+  border-bottom-right-radius: 15px;
+  position: absolute;
+  right: -59px;
+  top: 0;
+  transition: transform 0.5s ease-in-out;
+}
+.fa-circle-check {
+  color: white;
+}
+.toggle-checkbox:checked + .rectangle .square_check,
+.toggle-checkbox:checked + .rectangle .menu_item-price {
+  transform: translateX(-59px);
+}
+.menu_item-name,
+.menu_item-description {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: clip; /* Initially clip the overflow */
+  width: 280px;
+  transition: text-overflow 0.5s ease-in-out;
+}
+.toggle-checkbox:checked + label .menu_item-description {
+  text-overflow: ellipsis; /* Show ellipsis when checked */
+  width: calc(280px - 59px);
+}
+.toggle-checkbox:checked + label .menu_item-name {
+  text-overflow: ellipsis; /* Show ellipsis when checked */
+  width: calc(280px - 59px);
 }
