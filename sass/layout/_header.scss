@@ -5,7 +5,7 @@
   &_logo {
     width: 100%;
     height: 63px;
-    z-index: 2;
+    z-index: 1;
     @include flex(column, center, center);
     @include box-shadow;
     @media (min-width: 768px) {
@@ -23,7 +23,7 @@
   width: 100%;
   height: 50px;
   gap: 17px;
-  z-index: 1;
+  z-index: 0;
   @include flex(row, center, center);
   @include font-style(500, 16px);
   @include box-shadow;
@@ -34,11 +34,11 @@
     color: $color-middle-gray;
   }
 }
-
 .fa-arrow-left {
   position: absolute;
   top: 21px;
   left: 23px;
   font-size: 17px;
   color: $color-middle-gray;
+  z-index: 2;
 }

@@ -12,6 +12,7 @@
 .explore_text {
   @include font-style(300, 18px);
   color: $color-middle-gray;
+  line-height: 22px;
 }
 
 .fonctionnement_title,
