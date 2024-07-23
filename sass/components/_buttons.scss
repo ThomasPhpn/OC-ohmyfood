@@ -15,7 +15,7 @@
   padding: 15.5px 49px;
 }
 .fonctionnement_button {
-  @include flex(row, flex-start, center); // Spécifiez tous les trois arguments
+  @include flex(row, flex-start, center);
   @include font-style(500, 16px);
   @include box-shadow;
   width: 100%;

@@ -724,17 +724,17 @@ i.fa-solid.fa-heart::before {
 .menu_item-description {
   white-space: nowrap;
   overflow: hidden;
-  text-overflow: clip; /* Initially clip the overflow */
+  text-overflow: clip;
   transition: text-overflow 0.5s ease-in-out;
   width: 100%;
 }
 
 .toggle-checkbox:checked + label .menu_item-description {
-  text-overflow: ellipsis; /* Show ellipsis when checked */
+  text-overflow: ellipsis;
   width: calc(100% - 63px);
 }
 
 .toggle-checkbox:checked + label .menu_item-name {
-  text-overflow: ellipsis; /* Show ellipsis when checked */
+  text-overflow: ellipsis;
   width: calc(100% - 63px);
 }/*# sourceMappingURL=main.css.map */
