@@ -31,6 +31,52 @@ main {
   background-color: $color-light-gray;
 }
 
+// LOADER
+.loader {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 3;
+  width: 100%;
+  height: 100%;
+  background-color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  opacity: 1;
+  visibility: visible;
+  animation: fadeOut 3s forwards;
+}
+
+.loader::after {
+  content: "";
+  border: 4px solid $color-dark-violet;
+  border-top: 4px solid $color-light-pink;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  animation: spin 1s linear;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes fadeOut {
+  0% {
+    opacity: 1;
+    visibility: visible;
+  }
+  100% {
+    opacity: 0;
+    visibility: hidden;
+  }
+}
 // ACCUEIL
 
 .explore {
@@ -358,4 +404,18 @@ i.fa-solid.fa-heart::before {
 .toggle-checkbox:checked + label .menu_item-name {
   text-overflow: ellipsis;
   width: calc(100% - 63px);
+}
+// ANIMATION ITEMS
+.menu_item {
+  opacity: 0;
+  transform: translateY(100%);
+  animation: slideUp 1s forwards;
+  animation-delay: 0.5s;
+}
+
+@keyframes slideUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
