@@ -30,8 +30,18 @@
 .footer li {
   @include flex(row, center, baseline);
   gap: 10px;
-  i {
+
+  a {
     color: white;
+    text-decoration: none;
+    @include flex(row, center, center);
+    align-items: center;
+    gap: 10px;
+
+    i {
+      color: white;
+      height: 15px;
+    }
   }
 }
 @media (min-width: 768px) {

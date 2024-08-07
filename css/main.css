@@ -233,7 +233,7 @@ table {
   color: #353535;
   width: 100%;
   height: 50px;
-  gap: 17px;
+  gap: 8px;
   z-index: 0;
   display: flex;
   flex-direction: row;
@@ -249,6 +249,19 @@ table {
   }
 }
 .header_location .fa-location-dot {
+  color: #353535;
+}
+.header_location input {
+  border: none;
+  background: none;
+  width: 118px;
+  padding: 3px;
+  font: inherit;
+}
+.header_location input::-moz-placeholder {
+  color: #353535;
+}
+.header_location input::placeholder {
   color: #353535;
 }
 
@@ -308,8 +321,19 @@ table {
   align-items: baseline;
   gap: 10px;
 }
-.footer li i {
+.footer li a {
   color: white;
+  text-decoration: none;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  align-items: center;
+  gap: 10px;
+}
+.footer li a i {
+  color: white;
+  height: 15px;
 }
 
 @media (min-width: 768px) {
@@ -327,6 +351,10 @@ table {
   font-weight: 500;
   font-size: 16px;
   box-shadow: -1px 6px 6px 0px rgba(0, 0, 0, 0.12);
+}
+.explore_cta:hover,
+.order_button:hover {
+  opacity: 0.85;
 }
 
 .explore_cta {
@@ -352,6 +380,17 @@ table {
   border: none;
   padding: 20px 40px;
   border-radius: 20px;
+  color: #353535;
+}
+.fonctionnement_button:hover {
+  color: #9356dc;
+}
+.fonctionnement_button:hover .fa-solid {
+  color: #9356dc;
+}
+.fonctionnement_button .fa-solid {
+  color: #7e7e7e;
+  height: 20px;
 }
 
 * {
@@ -484,15 +523,6 @@ main {
   align-items: center;
 }
 
-.fa-solid {
-  color: #7e7e7e;
-  height: 20px;
-}
-
-.fa-store {
-  color: #9356dc;
-}
-
 .restaurants {
   padding: 50px 17.5px;
   gap: 20px;
@@ -581,19 +611,44 @@ i.fa-solid.fa-heart::before {
 .card--content .toggle-checkbox {
   display: none;
 }
+
+.card--content .fa-regular .regular-icon,
+.card--content .solid-icon {
+  transition: font-size 0.3s ease, opacity 0.3s ease;
+  font-size: 1em;
+}
+
 .card--content .fa-regular .regular-icon {
   display: inline;
 }
+
 .card--content .solid-icon {
   display: none;
-}
-.card--content .toggle-checkbox:checked + .toggle-label .regular-icon {
-  display: none;
-}
-.card--content .toggle-checkbox:checked + .toggle-label .solid-icon {
-  display: inline;
+  font-size: 1em;
 }
 
+.card--content .toggle-checkbox:checked + .toggle-label .regular-icon {
+  display: none;
+  opacity: 0;
+}
+
+.card--content .toggle-checkbox:checked + .toggle-label .solid-icon {
+  display: inline;
+  opacity: 1;
+  animation: growShrinkFontSize 0.5s forwards;
+}
+
+@keyframes growShrinkFontSize {
+  0% {
+    font-size: 1em;
+  }
+  50% {
+    font-size: 1.35em;
+  }
+  100% {
+    font-size: 1em;
+  }
+}
 .menu {
   background-color: white;
 }
@@ -688,17 +743,31 @@ i.fa-solid.fa-heart::before {
 .menu_container .toggle-checkbox {
   display: none;
 }
+
+.menu_container .regular-icon,
+.menu_container .solid-icon {
+  transition: font-size 0.3s ease, opacity 0.3s ease;
+  font-size: 1em;
+}
+
 .menu_container .regular-icon {
   display: inline;
 }
+
 .menu_container .solid-icon {
   display: none;
+  font-size: 1em;
 }
+
 .menu_container .toggle-checkbox:checked + .toggle-label .regular-icon {
   display: none;
+  opacity: 0;
 }
+
 .menu_container .toggle-checkbox:checked + .toggle-label .solid-icon {
   display: inline;
+  opacity: 1;
+  animation: growShrinkFontSize 0.5s forwards;
 }
 
 .rectangle {
@@ -771,6 +840,19 @@ i.fa-solid.fa-heart::before {
   text-overflow: clip;
   transition: text-overflow 0.5s ease-in-out;
   width: 100%;
+}
+@media (max-width: 375px) {
+  .menu_item-name,
+  .menu_item-description {
+    max-width: 240px;
+    text-overflow: ellipsis;
+  }
+}
+@media (max-width: 332px) {
+  .menu_item-name,
+  .menu_item-description {
+    white-space: normal;
+  }
 }
 
 .toggle-checkbox:checked + label .menu_item-description {

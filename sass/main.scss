@@ -129,15 +129,6 @@ main {
   @include flex(column, center, center);
 }
 
-.fa-solid {
-  color: $color-grey-icon;
-  height: 20px;
-}
-
-.fa-store {
-  color: $color-dark-violet;
-}
-
 .restaurants {
   padding: 50px 17.5px;
   gap: 20px;
@@ -210,25 +201,45 @@ i.fa-solid.fa-heart::before {
   background-clip: text;
 }
 
-.card--content {
-  .toggle-checkbox {
-    display: none;
-  }
+.card--content .toggle-checkbox {
+  display: none;
+}
 
-  .fa-regular .regular-icon {
-    display: inline;
-  }
+.card--content .fa-regular .regular-icon,
+.card--content .solid-icon {
+  transition: font-size 0.3s ease, opacity 0.3s ease;
+  font-size: 1em;
+}
 
-  .solid-icon {
-    display: none;
-  }
+.card--content .fa-regular .regular-icon {
+  display: inline;
+}
 
-  .toggle-checkbox:checked + .toggle-label .regular-icon {
-    display: none;
-  }
+.card--content .solid-icon {
+  display: none;
+  font-size: 1em;
+}
 
-  .toggle-checkbox:checked + .toggle-label .solid-icon {
-    display: inline;
+.card--content .toggle-checkbox:checked + .toggle-label .regular-icon {
+  display: none;
+  opacity: 0;
+}
+
+.card--content .toggle-checkbox:checked + .toggle-label .solid-icon {
+  display: inline;
+  opacity: 1;
+  animation: growShrinkFontSize 0.5s forwards;
+}
+
+@keyframes growShrinkFontSize {
+  0% {
+    font-size: 1em;
+  }
+  50% {
+    font-size: 1.35em;
+  }
+  100% {
+    font-size: 1em;
   }
 }
 
@@ -313,26 +324,34 @@ i.fa-solid.fa-heart::before {
 
 // ANIMATION COEUR PAGES RESTAURANTS
 
-.menu_container {
-  .toggle-checkbox {
-    display: none;
-  }
+.menu_container .toggle-checkbox {
+  display: none;
+}
 
-  .regular-icon {
-    display: inline;
-  }
+.menu_container .regular-icon,
+.menu_container .solid-icon {
+  transition: font-size 0.3s ease, opacity 0.3s ease;
+  font-size: 1em;
+}
 
-  .solid-icon {
-    display: none;
-  }
+.menu_container .regular-icon {
+  display: inline;
+}
 
-  .toggle-checkbox:checked + .toggle-label .regular-icon {
-    display: none;
-  }
+.menu_container .solid-icon {
+  display: none;
+  font-size: 1em;
+}
 
-  .toggle-checkbox:checked + .toggle-label .solid-icon {
-    display: inline;
-  }
+.menu_container .toggle-checkbox:checked + .toggle-label .regular-icon {
+  display: none;
+  opacity: 0;
+}
+
+.menu_container .toggle-checkbox:checked + .toggle-label .solid-icon {
+  display: inline;
+  opacity: 1;
+  animation: growShrinkFontSize 0.5s forwards;
 }
 // ANIMATION AJOUT PANNIER
 
@@ -396,6 +415,13 @@ i.fa-solid.fa-heart::before {
   text-overflow: clip;
   transition: text-overflow 0.5s ease-in-out;
   width: 100%;
+  @media (max-width: 375px) {
+    max-width: 240px;
+    text-overflow: ellipsis;
+  }
+  @media (max-width: 332px) {
+    white-space: normal;
+  }
 }
 .toggle-checkbox:checked + label .menu_item-description {
   text-overflow: ellipsis;
