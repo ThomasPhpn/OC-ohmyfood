@@ -45,7 +45,7 @@ main {
   align-items: center;
   opacity: 1;
   visibility: visible;
-  animation: fadeOut 3s forwards;
+  animation: fadeOut 2s forwards;
 }
 
 .loader::after {
@@ -55,7 +55,7 @@ main {
   border-radius: 50%;
   width: 40px;
   height: 40px;
-  animation: spin 1s linear;
+  animation: spin 2s linear;
 }
 
 @keyframes spin {
@@ -420,7 +420,13 @@ i.fa-solid.fa-heart::before {
     text-overflow: ellipsis;
   }
   @media (max-width: 332px) {
-    white-space: normal;
+    max-width: 200px;
+  }
+  @media (max-width: 299px) {
+    max-width: 170px;
+  }
+  @media (max-width: 259px) {
+    max-width: 140px;
   }
 }
 .toggle-checkbox:checked + label .menu_item-description {

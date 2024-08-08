@@ -343,20 +343,32 @@ table {
 }
 .explore_cta,
 .order_button {
+  cursor: pointer;
+  opacity: 1;
   border: none;
-  margin: 15px 0px 15px 0px;
+  margin: 15px 0px;
   color: white;
   border-radius: 25px;
   background: linear-gradient(359deg, #9356dc 0%, #ff79da 100%);
   font-weight: 500;
   font-size: 16px;
   box-shadow: -1px 6px 6px 0px rgba(0, 0, 0, 0.12);
+  transition: box-shadow 0.3s ease-in-out, opacity 0.3s ease-in-out;
 }
 .explore_cta:hover,
 .order_button:hover {
   opacity: 0.85;
+  box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.3);
 }
 
+@keyframes hoverEffect {
+  0% {
+    transform: scale(1);
+  }
+  100% {
+    transform: scale(1.05);
+  }
+}
 .explore_cta {
   padding: 15.5px 20px;
 }
@@ -425,7 +437,7 @@ main {
   align-items: center;
   opacity: 1;
   visibility: visible;
-  animation: fadeOut 3s forwards;
+  animation: fadeOut 2s forwards;
 }
 
 .loader::after {
@@ -435,7 +447,7 @@ main {
   border-radius: 50%;
   width: 40px;
   height: 40px;
-  animation: spin 1s linear;
+  animation: spin 2s linear;
 }
 
 @keyframes spin {
@@ -851,7 +863,19 @@ i.fa-solid.fa-heart::before {
 @media (max-width: 332px) {
   .menu_item-name,
   .menu_item-description {
-    white-space: normal;
+    max-width: 200px;
+  }
+}
+@media (max-width: 299px) {
+  .menu_item-name,
+  .menu_item-description {
+    max-width: 170px;
+  }
+}
+@media (max-width: 259px) {
+  .menu_item-name,
+  .menu_item-description {
+    max-width: 140px;
   }
 }
 

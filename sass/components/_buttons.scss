@@ -1,14 +1,28 @@
 .explore_cta,
 .order_button {
+  cursor: pointer;
+  opacity: 1;
   border: none;
-  margin: 15px 0px 15px 0px;
+  margin: 15px 0px;
   color: white;
   border-radius: 25px;
   background: linear-gradient-deg(359deg);
   @include font-style(500, 16px);
   @include box-shadow;
+  transition: box-shadow 0.3s ease-in-out, opacity 0.3s ease-in-out;
+
   &:hover {
     opacity: 0.85;
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.3);
+  }
+}
+
+@keyframes hoverEffect {
+  0% {
+    transform: scale(1);
+  }
+  100% {
+    transform: scale(1.05);
   }
 }
 .explore_cta {
